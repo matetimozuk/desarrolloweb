@@ -39,6 +39,21 @@ body{
     margin: 10px;
 }
 
+/*MOVIL QUERIE*/
+@media(max-width: 480px){
+    body{
+        grid-template-areas: 
+        "header"
+        "main"
+        ;
+    }
+    header{
+        margin: 0;
+    }
+    section .conocenos{
+        margin: 0;
+    }
+}
 
 /*CONTACTO*/
 .formulario h2{
@@ -155,7 +170,7 @@ input::placeholder, textarea::placeholder{
 
 
 
-/*GALERIA*/
+/*GALERIA RESPONSIVE*/
 
 main{
     grid-area: main;
