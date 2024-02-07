@@ -100,7 +100,6 @@ form{
         }
     }
     input, textarea{
-        padding: 17px 25px;
         border-radius: 25px;
         margin-bottom: 20px;
         background-color: #EDFFF0;
@@ -113,20 +112,6 @@ form{
     }
     .botn:hover{
         background-color:rgba(25, 254, 0, 0.4);
-    }
-    .cajacontact{
-        background-color: map-get($colores, colorcajas);
-        border-radius: 20px;
-        position: absolute;
-        bottom: 150px;
-        right: 200px;
-        height: 300px;
-        width: 250px; 
-        box-shadow: 0px 4px 6px map-get($colores, colorboxshadow);
-        p{
-            font-family: Arial, Helvetica, sans-serif;
-            color: map-get($colores, colorblanco);
-        }
     }
 }
 
@@ -159,8 +144,7 @@ main{
         justify-content: center;
         .mates{
             display: flex;
-            width: 400px;
-            height: 330px;
+            width: 100%;
             background-color: map-get($colores, colorcajas);
             border-radius: 20px;
             border: 1px solid rgb(87, 86, 86);
@@ -179,4 +163,50 @@ main{
         right: 30px;
     }
     
+}
+/*USAR MATE*/
+    .usarmate{
+        width: 100%;
+        background:rgb(22, 22, 22);
+        
+    p{
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+    
+}h2{
+    text-align: center;
+    color: wheat;
+}
+    }
+
+/*FOOTER*/
+footer{
+    background-color: rgb(87, 86, 86);
+text-align: center;
+height: 50px;
+font-size: 20px;
+}
+
+/*TABLET QUERIE*/
+@media(max-width: 991px){
+    main section{
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(6,1fr);
+    }
+}
+
+/*MOVIL QUERIE*/
+@media(max-width: 480px){
+    body{
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer"
+        ;
+    }
+    main section .mates{
+        margin: 0;
+    }
 }

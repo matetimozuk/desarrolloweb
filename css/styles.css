@@ -96,7 +96,6 @@ form .input-group label {
   margin-bottom: 15px;
 }
 form input, form textarea {
-  padding: 17px 25px;
   border-radius: 25px;
   margin-bottom: 20px;
   background-color: #EDFFF0;
@@ -108,20 +107,6 @@ form input::placeholder, form textarea::placeholder {
 }
 form .botn:hover {
   background-color: rgba(25, 254, 0, 0.4);
-}
-form .cajacontact {
-  background-color: rgba(107, 107, 107, 0.937254902);
-  border-radius: 20px;
-  position: absolute;
-  bottom: 150px;
-  right: 200px;
-  height: 300px;
-  width: 250px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-}
-form .cajacontact p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
 }
 
 /*UBICACION*/
@@ -152,8 +137,7 @@ main section {
 }
 main section .mates {
   display: flex;
-  width: 400px;
-  height: 330px;
+  width: 100%;
   background-color: rgba(107, 107, 107, 0.937254902);
   border-radius: 20px;
   border: 1px solid rgb(87, 86, 86);
@@ -169,6 +153,46 @@ main .whatssapp {
   position: fixed;
   bottom: 40px;
   right: 30px;
+}
+
+/*USAR MATE*/
+.usarmate {
+  width: 100%;
+  background: rgb(22, 22, 22);
+}
+.usarmate p {
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+}
+.usarmate h2 {
+  text-align: center;
+  color: wheat;
+}
+
+/*FOOTER*/
+footer {
+  background-color: rgb(87, 86, 86);
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
+}
+
+/*TABLET QUERIE*/
+@media (max-width: 991px) {
+  main section {
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+/*MOVIL QUERIE*/
+@media (max-width: 480px) {
+  body {
+    grid-template-areas: "header" "main" "aside" "footer";
+  }
+  main section .mates {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
